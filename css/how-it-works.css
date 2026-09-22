@@ -1,0 +1,263 @@
+.hiw {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  color: #ffffff;
+}
+
+.hiw__glow {
+  position: absolute;
+  pointer-events: none;
+  right: -20%;
+  bottom: -55%;
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.45), transparent 70%);
+}
+
+.hiw__cluster {
+  position: absolute;
+  pointer-events: none;
+  left: -20px;
+  bottom: 0;
+  width: 130px;
+  height: 145px;
+  opacity: 0.12;
+}
+
+.hiw__cluster span {
+  position: absolute;
+  background: var(--azure-light);
+}
+
+.hiw__cluster span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50% 50% 0 50%;
+}
+
+.hiw__cluster span:nth-child(2) {
+  left: 55px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  transform: rotate(20deg);
+}
+
+.hiw__cluster span:nth-child(3) {
+  left: 20px;
+  bottom: 80px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.hiw__inner {
+  position: relative;
+  z-index: 10;
+  padding: 56px 0;
+}
+
+.hiw__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+.hiw__left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hiw__label {
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--azure-light);
+}
+
+.hiw__heading {
+  max-width: 622px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hiw__desc {
+  margin-top: 20px;
+  max-width: 548px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--surface-3);
+}
+
+.hiw__right {
+  position: relative;
+}
+
+.hiw__intro {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 28px;
+}
+
+.hiw__intro h3 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.hiw__intro p {
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--surface-3);
+}
+
+.hiw__intro p a {
+  color: var(--surface-3);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hiw__intro p a:hover {
+  color: var(--azure-light);
+}
+
+.hiw__accordion-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hiw__accordion-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  text-align: left;
+  color: #ffffff;
+}
+
+.hiw__accordion-btn span.hiw__accordion-title {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.hiw__accordion-icon {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.hiw__accordion-icon svg {
+  height: 18px;
+  width: 18px;
+  color: var(--azure-light);
+  transition: transform 0.3s ease;
+}
+
+.hiw__accordion-item.is-active .hiw__accordion-icon svg {
+  transform: rotate(180deg);
+}
+
+.hiw__accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.3s ease, opacity 0.3s ease;
+}
+
+.hiw__accordion-item.is-active .hiw__accordion-panel {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.hiw__accordion-panel-inner {
+  overflow: hidden;
+}
+
+.hiw__accordion-panel p {
+  padding-bottom: 24px;
+  padding-right: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--surface-3);
+}
+
+@media (min-width: 640px) {
+  .hiw__inner {
+    padding: 64px 0;
+  }
+  .hiw__heading {
+    font-size: 24px;
+  }
+  .hiw__desc {
+    font-size: 17px;
+  }
+  .hiw__intro h3 {
+    font-size: 22px;
+  }
+  .hiw__accordion-btn span.hiw__accordion-title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hiw__inner {
+    padding: 80px 0;
+  }
+  .hiw__grid {
+    grid-template-columns: 581fr 609fr;
+    gap: 50px;
+  }
+  .hiw__label {
+    font-size: 14px;
+  }
+  .hiw__heading {
+    font-size: 46px;
+  }
+  .hiw__desc {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .hiw__intro {
+    padding-bottom: 28px;
+  }
+  .hiw__intro h3 {
+    font-size: 22px;
+  }
+  .hiw__intro p {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+  .hiw__accordion-btn {
+    padding: 24px 0;
+  }
+  .hiw__accordion-btn span.hiw__accordion-title {
+    font-size: 22px;
+  }
+  .hiw__accordion-icon {
+    height: 55px;
+    width: 55px;
+  }
+  .hiw__accordion-panel p {
+    padding-bottom: 24px;
+    padding-right: 60px;
+  }
+}

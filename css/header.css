@@ -1,0 +1,251 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 990;
+  width: 100%;
+  padding: 20px 0;
+  background: rgba(5, 22, 77, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header__bar {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.header__logo img {
+  width: 150px;
+  height: auto;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__actions {
+  display: none;
+}
+
+.header__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.header__toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.header__mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 16px;
+  right: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(5, 22, 77, 0.97);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+}
+
+.header__mobile-menu.is-open {
+  display: block;
+}
+
+.header__mobile-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__mobile-nav a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--surface-1);
+}
+
+.header__mobile-nav a:last-child {
+  border-bottom: none;
+}
+
+.header__mobile-cta {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  background: var(--amber);
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.header__mobile-cta svg {
+  width: 16px;
+  height: 16px;
+}
+
+.header__search-shortcut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.71);
+  color: var(--text-body);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@media (min-width: 640px) {
+  .header {
+    padding-top: 28px;
+  }
+  .header__bar {
+    height: 48px;
+  }
+  .header__logo img {
+    width: 175px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding-top: 20px;
+  }
+  .header__bar {
+    height: 45px;
+  }
+  .header__logo img {
+    width: 220px;
+  }
+  .header__toggle {
+    display: none;
+  }
+  .header__mobile-menu {
+    display: none !important;
+  }
+  .header__nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  .header__nav a {
+    color: var(--surface-1);
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+  }
+  .header__nav a:hover {
+    color: var(--amber);
+  }
+  .header__actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .header__search {
+    display: flex;
+    align-items: center;
+    width: 228px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid var(--text-muted);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2px 4px 2px 12px;
+  }
+  .header__search svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .header__search input {
+    min-width: 0;
+    flex: 1;
+    background: transparent;
+    border: 0;
+    outline: none;
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--border-strong);
+  }
+  .header__search input::placeholder {
+    color: var(--border-strong);
+  }
+  .header__search kbd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.71);
+    color: var(--text-body);
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .header__cta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 999px;
+    background: var(--amber);
+    padding: 0 46px 0 16px;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 500;
+    transition: filter 0.3s ease;
+  }
+  .header__cta:hover {
+    filter: brightness(1.05);
+  }
+  .header__cta-icon {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: var(--navy);
+    color: #ffffff;
+  }
+  .header__cta-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+}

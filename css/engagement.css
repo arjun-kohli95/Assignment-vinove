@@ -1,0 +1,137 @@
+.engagement {
+  background: #ffffff;
+  padding: 38px 0;
+}
+
+.engagement__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 40px;
+}
+
+.engagement__label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--azure);
+}
+
+.engagement__heading {
+  max-width: 622px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--navy);
+}
+
+.engagement__desc {
+  margin-top: 20px;
+  max-width: 641px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+.engagement__card-wrap {
+  position: relative;
+  padding-top: 8px;
+}
+
+.engagement__card-wrap::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 28px;
+  border-radius: 20px 20px 0 0;
+  background: var(--azure);
+}
+
+.engagement__card {
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  background: var(--surface-1);
+  padding: 24px;
+  box-shadow: 0 4px 14px 3px rgba(4, 0, 245, 0.08);
+}
+
+.engagement__card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--azure);
+}
+
+.engagement__card p {
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+@media (min-width: 640px) {
+  .engagement {
+    padding: 64px 0;
+  }
+  .engagement__heading {
+    font-size: 24px;
+  }
+  .engagement__desc {
+    font-size: 17px;
+  }
+  .engagement__card {
+    padding: 30px;
+  }
+  .engagement__card h3 {
+    font-size: 20px;
+  }
+  .engagement__card p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .engagement {
+    padding: 80px 0 60px;
+  }
+  .engagement__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 60px;
+  }
+  .engagement__label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    letter-spacing: 0.17em;
+  }
+  .engagement__heading {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+  .engagement__desc {
+    margin-top: 20px;
+    max-width: 641px;
+    font-size: 18px;
+  }
+  .engagement__card-wrap {
+    max-width: 538px;
+    justify-self: end;
+  }
+  .engagement__card {
+    padding: 30px;
+  }
+  .engagement__card h3 {
+    font-size: 20px;
+  }
+  .engagement__card p {
+    font-size: 16px;
+  }
+}

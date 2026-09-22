@@ -1,0 +1,54 @@
+.ads {
+  position: relative;
+  z-index: 60;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #011c71, #0026a0);
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ads__track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.ads__set {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.ads__item {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  padding-right: 10px;
+}
+
+.ads__dot {
+  color: #ffffff;
+  font-size: 10px;
+  padding-right: 10px;
+}
+
+@media (min-width: 1024px) {
+  .ads {
+    height: 62px;
+  }
+  .ads__item {
+    font-size: 14px;
+    padding-right: 12px;
+  }
+  .ads__dot {
+    font-size: 14px;
+    padding-right: 12px;
+  }
+}

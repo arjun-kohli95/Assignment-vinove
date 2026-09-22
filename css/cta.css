@@ -1,0 +1,99 @@
+.cta {
+  position: relative;
+  overflow: hidden;
+  background-image: url(../Assets/images/ctobg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cta__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(650px 500px at 96% 10%, rgba(37, 99, 235, 0.3), transparent 65%),
+    radial-gradient(500px 450px at 90% 95%, rgba(106, 160, 255, 0.16), transparent 70%);
+}
+
+.cta__wrap {
+  position: relative;
+  z-index: 10;
+  padding: 56px 20px;
+}
+
+.cta__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cta__heading {
+  max-width: 830px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.cta__desc {
+  margin-top: 16px;
+  max-width: 700px;
+  font-family: 'Inter', sans-serif;
+  color: var(--border-subtle);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.cta__buttons {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cta__note {
+  margin-top: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+@media (min-width: 640px) {
+  .cta__wrap {
+    padding: 64px 32px;
+  }
+  .cta__heading {
+    font-size: 24px;
+  }
+  .cta__desc {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta__wrap {
+    width: min(1240px, 100% - 48px);
+    margin: 0 auto;
+    padding: 70px 0;
+  }
+  .cta__heading {
+    font-size: 1.8vw;
+  }
+  .cta__desc {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+  .cta__buttons {
+    margin-top: 30px;
+    gap: 20px;
+  }
+  .cta__note {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+}
